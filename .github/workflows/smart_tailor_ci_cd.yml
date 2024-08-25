@@ -47,15 +47,9 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.MY_APPLICATION }}:latest
 
-      - name: Setup Docker Compose
-        run: |
-          docker-compose -f docker-compose.yml up
-        env:
-          DOCKER_CLI_EXPERIMENTAL: enabled
-
-#      - name: Deploy to Heroku
-#        uses: akhileshns/heroku-deploy@v3.13.15
-#        with:
-#          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-#          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-#          heroku_email: ${{secrets.HEROKU_EMAIL}}
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.13.15
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
