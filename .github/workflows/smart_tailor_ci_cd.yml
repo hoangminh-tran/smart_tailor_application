@@ -19,6 +19,9 @@ jobs:
           distribution: 'corretto'
           java-version: 17
 
+      - name: Unit Tests
+        run: mvn -B test --file pom.xml
+
       - name: Build the Application
         run: mvn clean package --file pom.xml
 
@@ -43,6 +46,12 @@ jobs:
           dockerfile: Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.MY_APPLICATION }}:latest
+
+      - name: Setup Docker Compose
+        run: |
+          docker-compose -f docker-compose.yml up
+        env:
+          DOCKER_CLI_EXPERIMENTAL: enabled
 
 #      - name: Deploy to Heroku
 #        uses: akhileshns/heroku-deploy@v3.13.15

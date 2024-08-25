@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.39-debian
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: smart_tailor_be
+    ports:
+      - "3307:3306"
+    networks:
+      - smart-tailor-network
+
+  app:
+    image: thminh101002/smart_tailor_application:0.0.1
+    container_name: smart_tailor_application
+    environment:
+      DBMS_CONNECTION: jdbc:mysql://mysql:3306/smart_tailor_be
+    ports:
+      - "6968:6969"
+    depends_on:
+      - mysql
+    networks:
+      - smart-tailor-network
+
+networks:
+  smart-tailor-network:
+    driver: bridge
