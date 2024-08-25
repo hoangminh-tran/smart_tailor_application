@@ -2,7 +2,7 @@
 
 ## Tech stack
 * Build Tool: Maven 3.9.5 or higher
-* Programming Language: Java 21
+* Programming Language: Java 17
 * Framework: Spring Boot 3.2.5
 * Database Management System (DBMS): MySQL
 * Authentication: OAuth2 (Google)
@@ -15,7 +15,7 @@
 * Other Integrations: VietQR, WebSocket, ...
 
 ## Prerequisites
-* Java SDK: Version 21
+* Java SDK: Version 17
 * MySQL Server: Version 8.0 or higher
 
 ## Start application
