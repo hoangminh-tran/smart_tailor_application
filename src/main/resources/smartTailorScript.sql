@@ -1,5 +1,4 @@
--- use smart_tailor_be;
--- use railway;
+use smart_tailor_be;
 
 -- INSERT INTO ROLES
 INSERT INTO roles(role_id, create_date, last_modified_date, role_name)
