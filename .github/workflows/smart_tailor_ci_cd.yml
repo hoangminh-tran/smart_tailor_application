@@ -62,7 +62,12 @@ jobs:
         run: sudo docker image pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.MY_APPLICATION }}:latest
 
       - name: Delete Old Docker Container
-        run: sudo docker container rm ${{ secrets.MY_APPLICATION }}
+        run: |
+          if [ "$(sudo docker ps -a -q -f name=${{ secrets.MY_APPLICATION }})" ]; then
+            sudo docker container rm -f ${{ secrets.MY_APPLICATION }}
+          else
+            echo "Container ${{ secrets.MY_APPLICATION }} does not exist."
+          fi
 
       - name: Run Docker Container
         run: |
