@@ -10,7 +10,7 @@
 * Email Service: Spring Thymeleaf Mail with Gmail
 * Payment Gateway: PayOS, VNPAY
 * Shipping Service: GHTK (Giao Hàng Tiết Kiệm)
-* Deployment: Heroku
+* Deployment: AWS EC2, Heroku
 * Database Hosting: Railway
 * Other Integrations: VietQR, WebSocket, ...
 
