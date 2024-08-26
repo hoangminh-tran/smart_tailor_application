@@ -59,14 +59,14 @@ jobs:
           sudo apt-get install -y docker.io
 
       - name: Pull Docker Image From Docker Hub
-        run: docker image pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.MY_APPLICATION }}:latest
+        run: sudo docker image pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.MY_APPLICATION }}:latest
 
       - name: Delete Old Docker Container
-        run: docker container rm ${{ secrets.MY_APPLICATION }}
+        run: sudo docker container rm ${{ secrets.MY_APPLICATION }}
 
       - name: Run Docker Container
         run: |
-          docker run --name ${{ secrets.MY_APPLICATION }} -p 6968:6969 \
+          sudo docker run --name ${{ secrets.MY_APPLICATION }} -p 6968:6969 \
             -e DBMS_CONNECTION=${{ secrets.DBMS_CONNECTION }} \
             -e DBMS_USERNAME=${{ secrets.DBMS_USERNAME }} \
             -e DBMS_PASSWORD=${{ secrets.DBMS_PASSWORD }} \
