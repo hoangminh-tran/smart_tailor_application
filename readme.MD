@@ -1,22 +1,50 @@
-# Smart Tailor BE
+Smart Tailor
 
-## Tech stack
-* Build Tool: Maven 3.9.5 or higher
-* Programming Language: Java 17
-* Framework: Spring Boot 3.2.5
-* Database Management System (DBMS): MySQL
-* Authentication: OAuth2 (Google)
-* Security: JWT (JSON Web Token)
-* Email Service: Spring Thymeleaf Mail with Gmail
-* Payment Gateway: PayOS, VNPAY
-* Shipping Service: GHTK (Giao Hàng Tiết Kiệm)
-* Deployment: AWS EC2, Heroku
-* Database Hosting: Railway
-* Other Integrations: VietQR, WebSocket, ...
+**Smart Tailor** is an innovative platform for customizing clothing using advanced 3D modeling technology. The application enables customers to create personalized garments by uploading images, adding text, and selecting materials.
+
+## Features
+
+- **3D Clothing Customization:** Design and preview outfits in 3D with options to upload images and add text for detailed customization.
+- **Material and Price Management:** Import material details and pricing information via Excel for easy management.
+- **Brand Matching:** Filter and match brands based on platform criteria for better user-brand interactions.
+- **Payment Integration:** Supports payments through PayOS and VNPAY.
+- **Real-Time Notification:** Provides instant updates and notifications.
+- **Shipping Fee Calculation:** Calculates shipping fees via GHTK.
+
+## How It Works
+
+1. **Design Creation:** Use 3D modeling tools to design and customize clothing.
+2. **Material Selection:** Choose materials with transparent pricing displayed.
+3. **Order Placement:** Place orders and make payments according to defined stages.
+4. **Brand Interaction:** Orders are sent to matching brands for production based on the system’s schedules.
+5. **Order Tracking:** Track progress and milestones of orders through the website.
+
+## Benefits
+
+- **Personalization:** High level of customization for unique garment creation.
+- **Transparency:** Clear pricing and material information.
+- **Efficiency:** Streamlined material management and order tracking.
+
+## Tech Stack
+
+- **Build Tool:** Maven 3.9.5 or higher
+- **Programming Language:** Java 17
+- **Framework:** Spring Boot 3.2.5
+- **Database:** MySQL
+- **Authentication:** OAuth2 (Google)
+- **Security:** JWT (JSON Web Token)
+- **Email Service:** Spring Thymeleaf Mail with Gmail
+- **Payment Gateway:** PayOS, VNPAY
+- **Shipping Service:** GHTK (Giao Hàng Tiết Kiệm)
+- **Deployment:** AWS EC2, Heroku
+- **Database Hosting:** Railway
+- **Other Integrations:** VietQR, WebSocket
+- **CI/CD:** GitHub Actions
 
 ## Prerequisites
-* Java SDK: Version 17
-* MySQL Server: Version 8.0 or higher
+
+- **Java SDK:** Version 17
+- **MySQL Server:** Version 8.0 or higher
 
 ## Start application
 `mvn spring-boot:run`
