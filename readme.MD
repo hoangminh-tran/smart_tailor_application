@@ -1,4 +1,4 @@
-Smart Tailor
+#Smart Tailor
 
 **Smart Tailor** is an innovative platform for customizing clothing using advanced 3D modeling technology. The application enables customers to create personalized garments by uploading images, adding text, and selecting materials.
 
